@@ -1,0 +1,8 @@
+build:
+  image: python:3.11-slim
+  commands:
+    - pip install -r requirements.txt
+run:
+  command: ["python", "main.py"]
+ports:
+  - 8080:8080  # Если бот использует webhook (для long-polling порт не обязателен)
